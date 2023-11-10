@@ -1,0 +1,12 @@
+module.exports = {
+    getText1: (req, res) => {
+        if (err) {
+            return res.status(400).send('sorry I am too sleepy to reply')
+        }
+        res.status(200).send('hi I am chatbot text')
+    },
+
+
+
+}
+
