@@ -258,7 +258,14 @@ h2 {
     height:196px;
 }
 
-
+#screenshot {
+    width: 400px
+}
+ 
+#day {
+    background-color: black;
+    background-image: none;
+}
 
 @keyframes pulse {
     0% {
