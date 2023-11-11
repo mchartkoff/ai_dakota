@@ -1,6 +1,6 @@
 /* 
 colors:
-#6AA9E9 - medium blue
+#4D9DEE - medium blue
 #D7DCFF - periwinkle
 #798395 - gray
 #061531 - dark blue
@@ -18,11 +18,28 @@ body{
     font-size:1rem;
     font-family:'Oxygen',sans-serif;
 }
+
+h2 {
+    font-size: 16px;
+} 
+
+p {
+    font-size: 14px;
+}
+
 .background {
     background-image: url("/images/White-Paper-Background.jpg");
 }
+.nav {
+    height: 50px;
+    
+}
 .big-robot {
     height: 400px
+}
+
+.small-robot {
+    height: 100px
 }
 
 .center {
@@ -38,6 +55,13 @@ body{
 .grey-background {
     background-color: #D9D9D9;
     padding: 10px 20px
+}
+.blue-border {
+    border-radius: 15px;
+    border-color: #4D9DEE; 
+    border-width: thick;  
+    background-color: white;
+    padding: 10px 15px;
 }
 
 .bold {
