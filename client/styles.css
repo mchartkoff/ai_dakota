@@ -103,6 +103,10 @@ nav {
     display: inline;
 
 }
+.svg-size {
+    height: 82px;
+}
+
 .big-robot {
     height: 350px;
 }
@@ -113,7 +117,8 @@ nav {
 
 .banner {
     background-color: var(--clr-gray);
-    background-position-x: right;
+    position: absolute;
+    right: 0px;
     height: 90px;
     width: 75%;
 }
