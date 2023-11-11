@@ -2,6 +2,7 @@
 
 /*******CHAT Variables*******/
 let botTextNumber = 0;
+let humanTextNumber = 0;
 
 const chatInput = document.querySelector(".container .chatarea textarea")
 const chatBtn = document.querySelector(".container .chatarea .btn")
@@ -14,22 +15,28 @@ if(chatBtn !== null){
 	})
 }
 
-if(chatInput !== null){
-	chatInput.addEventListener("keyup", function(e){
-		
-		if(e.key === "Enter"){
-			
-			runBotResponse()
+if(document.querySelector(".chatarea") !== null){
+window.addEventListener("load", function(){
+	setTimeout(function(){ 
 
-		}
-	})
+		generateHumanInput()
+		humanTextNumber++
+
+	}, 2000)
+})
 }
 
 
 /*******CHAT Functions*******/
 
+function generateHumanInput(){
+
+	chatInput.value = prompts[0].human[humanTextNumber]
+
+}
 
 function generateBotResponse(type){
+
 	const botBubble = document.createElement("div");
 	botBubble.setAttribute("class","chat-bubble " + type);
 	if(botTextNumber > 1 && type === "bot"){
@@ -40,6 +47,13 @@ function generateBotResponse(type){
 	botBubble.innerHTML = bubbleText;
 
 	document.querySelector(".chatarea > div:first-child").appendChild(botBubble);
+	if(humanTextNumber < 3 && type === "bot"){
+		setTimeout(function(){ 
+
+			generateHumanInput()
+			humanTextNumber++
+		}, 2000)
+	}
 }
 
 function runBotResponse(){
