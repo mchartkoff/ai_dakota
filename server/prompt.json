@@ -1,28 +1,33 @@
 [
   {
-    "movement": "Abstract Expressionism",
-    "characterists": "Non-representational Art,Influence of Surrealism,Personal Experience,Variety of Styles,Gestural Brush-strokes or Mark-making",
-    "artists": [
-      {
-        "artist": "Jackson Pollack",
-        "image": "https://www.worldhistoryedu.com/wp-content/uploads/2021/03/Abstract-Expressionism-3.jpg"
+    "bot": [
+      { 
+      "bottext1": "Tell me a bit about what you're overwhelmed with today.",
       },
       {
-        "artist": "Mark Rothko",
-        "image": "https://cdn.britannica.com/66/43666-050-8D434E13/Orange-Yellow-oil-canvas-Mark-Rothko-NY-1956.jpg?w=300"
+      "bottext2": "What are the requirements for this term paper project? Feel free to copy and paste your syllabus below.",
       },
       {
-        "artist": "William De Kooning",
-        "image": "https://cdn.britannica.com/42/175342-050-69EE25DC/oil-Woman-II-canvas-Willem-de-Kooning-1952.jpg?w=300"
+        "bottext3":"And what is the due date?",
       },
       {
-        "artist": "Helen FrankenThaler",
-        "image": "https://www.theartstory.org/images20/works/abstract_expressionism_7.jpg?1"
+        "bottext4": "Calculating your plan for sucess."
+      } 
+      
+    ],
+    
+    "human": [
+      {
+        "text1": "I have to write a term paper for my art history class."
+      },
+      {
+        "text2": "List five significant art movements and provide a brief description of each"
+      },
+      {
+        "text3": "10 weeks from now"
       }
 
-    ],
-
-    "modern-influence": "Shift of Artistic Focus,  Influence on Subsequent Art Movements,New Artistic Techniques and Approaches, Promotion of Abstract Art, Art as a Reflection of the Artist’s Inner State",
-
+    ]
   }
+
 ]
