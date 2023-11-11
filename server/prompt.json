@@ -1,31 +1,15 @@
-[
+let prompts = [
   {
     "bot": [
-      { 
-      "bottext1": "Tell me a bit about what you're overwhelmed with today.",
-      },
-      {
-      "bottext2": "What are the requirements for this term paper project? Feel free to copy and paste your syllabus below.",
-      },
-      {
-        "bottext3":"And what is the due date?",
-      },
-      {
-        "bottext4": "Calculating your plan for sucess."
-      } 
-      
+      "What are the requirements for this term paper project? Feel free to copy and paste your syllabus below.",
+      "And what is the due date?",
+      "Calculating your plan for success."
     ],
     
     "human": [
-      {
-        "text1": "I have to write a term paper for my art history class."
-      },
-      {
-        "text2": "List five significant art movements and provide a brief description of each"
-      },
-      {
-        "text3": "10 weeks from now"
-      }
+        "I have to write a term paper for my art history class.",
+        "List five significant art movements and provide a brief description of each",
+        "10 weeks from now"
 
     ]
   }
