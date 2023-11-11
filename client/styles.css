@@ -8,6 +8,9 @@ colors:
 Dakota font: Source Code Pro
 User font: Oxygen
 */
+*{
+    box-sizing: border-box;
+}
 
 html{
     height:100%;
@@ -17,6 +20,8 @@ html{
 body{
     font-size:1rem;
     font-family:'Oxygen',sans-serif;
+    height:100%;
+    min-height:100%;
 }
 
 h2 {
@@ -27,12 +32,24 @@ p {
     font-size: 14px;
 }
 
+textarea{
+    font-family:'Oxygen',sans-serif;
+
+}
+
+nav {
+    text-align: right;
+}
+
 .background {
-    background-image: url("/images/White-Paper-Background.jpg");
+
+    background-image: url("../images/White-Paper-Background.jpg");
+    background-size: cover;
 }
 .nav {
     height: 50px;
-    
+    display: inline;
+
 }
 .big-robot {
     height: 400px
@@ -46,6 +63,16 @@ p {
     margin: auto;
     width: 50%;
 }
+
+.text-center{
+    text-align: center;    
+}
+
+h2 {
+    font-size: 16px;
+} 
+
+
 .index {
     max-width: 400px;
     border-radius: 15px;
@@ -53,16 +80,65 @@ p {
 }
 
 .grey-background {
-    background-color: #D9D9D9;
+    background-color: #E9E9E9;
     padding: 10px 20px
 }
 .blue-border {
     border-radius: 15px;
     border-color: #4D9DEE; 
-    border-width: thick;  
+
+    border-width: 1px; 
+    border-style: solid; 
+
     background-color: white;
     padding: 10px 15px;
 }
+
+
+.btn{
+    width:100%;
+    margin-bottom: 5px;
+    border-radius: 15px;
+    border-color: #4D9DEE; 
+    border-width: 1px; 
+    border-style: solid; 
+    background-color: white;
+    color:black;
+    font-size:0.7rem;
+    padding: 10px 15px;
+}
+
+.btn-small{
+    background-color: #1D2A44;
+    color:white;
+    
+}
+
+.chat-bubble{
+    border-radius: 15px;
+    box-shadow: 0px 4px 7px -5px rgba(0, 0, 0, 1);
+    padding: 10px 20px;
+    margin: 10px;
+}
+.human{
+    background-color: #D7DCFF;
+    width:90%;
+    margin-left:10%;
+
+}
+
+.bot{
+    background-color: #E7E7E7;
+    width:90%;
+    margin-right:10%;
+}
+
+.calculating{
+    width:100%;
+    transform: scale(1);
+    animation: pulse 2s infinite;
+}
+
 
 .bold {
     font-weight: 900;
@@ -75,4 +151,62 @@ p {
 .footer {
     font-size: 12px;
     margin: 10px 
+
+}
+
+.container{
+    height: 100%;
+}
+
+.container > div:first-child{
+    height: 50px;
+}
+
+.container > div:nth-child(2){
+    height: calc(100% - 246px);
+}
+
+.container > div:last-child{
+    height: 96px;
+}
+
+.container > .chatarea > div:first-child{
+    height:68%;
+    margin-bottom:2%;    
+}
+
+.container > .chatarea > div:last-child{
+    height:25%;  
+    margin-bottom:5%;  
+}
+
+.container > .chatarea textarea{
+    height:calc(100%-90px);    
+}
+
+.container > .chatarea button{
+    width:50%;    
+}
+
+.robot .big-robot{
+    height:196px;
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+
 }
