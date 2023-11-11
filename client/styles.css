@@ -111,9 +111,18 @@ nav {
     height: 100px
 }
 
+.banner {
+    background-color: var(--clr-gray);
+    background-position-x: right;
+    height: 90px;
+    width: 75%;
+}
+
 .sideways-robot {
-    height: 240px;
+    width: 200px;
     transform: rotate(90deg);
+    position: absolute;
+    left: 1.25rem;
 }
 
 .center {
