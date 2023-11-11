@@ -1,6 +1,86 @@
+/*******CHAT*******/
 
-const continueBtn = document.getElementById('continue')
-const Btn = document.getElementById('') // from chat.html
+/*******CHAT Variables*******/
+let botTextNumber = 0;
+
+const chatInput = document.querySelector(".container .chatarea textarea")
+const chatBtn = document.querySelector(".container .chatarea .btn")
+
+
+/*******CHAT Listeners*******/
+if(chatBtn !== null){
+	chatBtn.addEventListener("click", function(e){
+		runBotResponse()
+	})
+}
+
+if(chatInput !== null){
+	chatInput.addEventListener("keyup", function(e){
+		
+		if(e.key === "Enter"){
+			
+			runBotResponse()
+
+		}
+	})
+}
+
+
+/*******CHAT Functions*******/
+
+
+function generateBotResponse(type){
+	const botBubble = document.createElement("div");
+	botBubble.setAttribute("class","chat-bubble " + type);
+	if(botTextNumber > 1 && type === "bot"){
+		botBubble.setAttribute("class","chat-bubble calculating");
+	}
+	const bubbleName = "<span class=\"bold\">" + (type === 'human'? 'You' : 'Dakota') + ":</span>" 
+	const bubbleText = type === "human" ? chatInput.value : prompts[0].bot[botTextNumber];
+	botBubble.innerHTML = bubbleText;
+
+	document.querySelector(".chatarea > div:first-child").appendChild(botBubble);
+}
+
+function runBotResponse(){
+	generateBotResponse("human")
+
+		chatInput.value = ""
+		chatInput.placeholder = ""
+
+		const chatDiv = document.querySelector(".chatarea > div:first-child")
+
+		if(botTextNumber > 1){
+			
+			chatDiv.removeChild(chatDiv.querySelector("div:first-child"))
+			chatDiv.removeChild(chatDiv.querySelector("div:nth-child(1)"))
+		}
+
+
+		setTimeout(function(){ 
+
+			generateBotResponse("bot")
+			botTextNumber++
+
+
+			if(botTextNumber > 2){
+				document.querySelector(".chatarea .input-area").removeChild(chatInput)
+				document.querySelector(".chatarea .input-area").removeChild(chatBtn)
+				setTimeout(function(){ 
+					showSchedule()
+				}, 2000)
+			}
+
+		}, 750)
+}
+
+
+
+
+const continueBtn = document.getElementById('continue') !== null 
+		? document.getElementById('continue')
+		: null
+
 const startBtn = document.getElementById('start')
 
 function startChat() {
@@ -15,6 +95,10 @@ function startProject() {
     window.location.href = `./day.html`;
 }
 
-continueBtn.addEventListener('click', startChat)
-Btn.addEventListener('click', showSchedule)
-startBtn.addEventListener('click', startProject)
+
+if(continueBtn !== null)
+	continueBtn.addEventListener('click', startChat)
+
+if(startBtn !== null)
+	startBtn.addEventListener('click', startProject)
+
