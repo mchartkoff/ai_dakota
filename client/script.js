@@ -4,8 +4,8 @@
 let botTextNumber = 0;
 let humanTextNumber = 0;
 
-const chatInput = document.querySelector(".container .chatarea textarea")
-const chatBtn = document.querySelector(".container .chatarea .btn")
+const chatInput = document.querySelector(".container-fluid.chat .chatarea textarea")
+const chatBtn = document.querySelector(".container-fluid.chat .chatarea .btn")
 
 
 /*******CHAT Listeners*******/

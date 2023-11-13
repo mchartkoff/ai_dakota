@@ -34,14 +34,7 @@ User font: Oxygen
 
 }
 
-@media (min-width: 800px) {
-    :root {
-        --fs-h1: 4rem;
-        --fs-h2: 3rem;
-        --fs-h3: 1.5rem;
-        --fs-body: 1.125rem;
-    }
-}
+
 
 html{
     height:100%;
@@ -58,7 +51,7 @@ body{
     background-size: cover;
 }
 
-.container {
+.container, .container-fluid  {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -67,15 +60,6 @@ body{
     margin: auto;
 }
 
-.content {
-    display: flex;
-    flex-direction: column;
-    margin: auto 0;
-    max-width: 400px;
-    text-align: justify;
-    align-items: center;
-    justify-content: center;
-}
 
 
 h2 {
@@ -109,6 +93,9 @@ nav {
 
 .big-robot {
     height: 350px;
+    width: auto;
+    max-width: max-content;
+    margin: 0 auto;
 }
 
 .small-robot {
@@ -150,7 +137,7 @@ h2 {
 .dakota-msg {
     border-radius: 15px;
     background-color: var(--clr-graycthru);
-    width: 400px;
+
 }
 
 
@@ -234,37 +221,35 @@ h2 {
     margin: 10px 
 
 }
- .container{
-    height: 100%;
-}
 
-.container > div:first-child{
+
+.container-fluid.chat > nav{
     height: 50px;
 }
 
-.container > div:nth-child(2){
-    height: calc(100% - 246px);
+.container-fluid.chat > div:nth-child(2){
+    height: calc(100vh - 246px);
 }
 
-.container > div:last-child{
+.container-fluid.chat > div:last-child{
     height: 96px;
 }
 
-.container > .chatarea > div:first-child{
+.container-fluid.chat > .chatarea > div:first-child{
     height:68%;
     margin-bottom:2%;    
 }
 
-.container > .chatarea > div:last-child{
+.container-fluid.chat > .chatarea > div:last-child{
     height:25%;  
     margin-bottom:5%;  
 }
 
-.container > .chatarea textarea{
+.container-fluid.chat > .chatarea textarea{
     height:calc(100%-90px);    
 }
 
-.container > .chatarea button{
+.container-fluid.chat > .chatarea button{
     width:50%;    
 }
 
@@ -297,4 +282,17 @@ h2 {
         box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     }
 
+}
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4rem;
+        --fs-h2: 3rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+
+    .container-fluid{
+        max-width: 50%;
+    }
 }
