@@ -25,10 +25,10 @@ User font: Oxygen
     --clr-dkblue: #061531;
     --clr-graycthru: rgba(233, 233, 233, 0.5);
 
-    --fs-h1: 3rem;
-    --fs-h2: 2.25rem;
-    --fs-h3: 1.25rem;
-    --fs-body: 1rem;
+    --fs-h1: 2.5rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1rem;
+    --fs-body: .75rem;
 
     --bg-primary: url("../images/White-Paper-Background.jpg");
 
@@ -66,29 +66,22 @@ h2 {
     font-size: 16px;
 } 
 
-p {
+p, #dakota {
+    font-family: var(--ff-secondary);
     font-size: 14px;
 }
 
-p, #dakota {
-    font-family: var(--ff-secondary);
-}
-
-textarea{
-    font-family:'Oxygen',sans-serif;
-}
-
-nav {
+nav, footer {
     text-align: right;
 }
 
-.nav {
+.nav, .footer {
     height: 50px;
     display: inline;
-
 }
+
 .svg-size {
-    height: 82px;
+    height: 80px;
 }
 
 .big-robot {
@@ -99,38 +92,48 @@ nav {
 }
 
 .small-robot {
-    height: 100px
+    height: 100px;
 }
 
 .banner {
     background-color: var(--clr-gray);
     position: absolute;
-    right: 0px;
+    z-index: 0;
+    padding: 20px;
     height: 90px;
     width: 75%;
 }
 
 .sideways-robot {
-    width: 200px;
+    max-width: 33%;
     transform: rotate(90deg);
     position: absolute;
-    left: 1.25rem;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
-.center {
-    margin: 0 auto;
+#banner-container {
+    position: relative;
+    margin-top: 100px; /* Adjust this margin based on your design */
 }
 
-.text-center{
-    text-align: center;    
+
+
+
+.next-steps {
+    margin-top: 20px; /* Adjust the margin based on your design */
 }
 
-h2 {
-    font-size: 16px;
-} 
+.task {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
 
-.input-area, textarea {
-    width: 100%;
+.input-response {
+    margin-bottom: 10px;
+
 }
 
 
@@ -139,7 +142,6 @@ h2 {
     background-color: var(--clr-graycthru);
 
 }
-
 
 .blue-border {
     border-radius: 15px;
@@ -163,6 +165,19 @@ h2 {
     background-color: white;
     color: var(--clr-dkblue);
     font-size:.75rem;
+    padding: 10px 15px;
+    font-family: var(--ff-secondary);
+}
+
+.btn-inverted{
+    width: 100%;
+    margin-bottom: 5px;
+    border-radius: 15px;
+    border-color: var(--clr-accentblue); 
+    border: 1px solid white;
+    background-color: var(--clr-dkblue);
+    color: var(--clr-gray);
+    font-size:var(--fs-body);
     padding: 10px 15px;
     font-family: var(--ff-secondary);
 }
@@ -208,18 +223,9 @@ h2 {
     font-weight: var(--fw-bold);
 }
 
-.blue-text {
-    color: #4D9DEE
-}
 
 .hidden {
     display: none !important;
-}
-
-.footer {
-    font-size: 12px;
-    margin: 10px 
-
 }
 
 
@@ -257,14 +263,6 @@ h2 {
     height:196px;
 }
 
-#screenshot {
-    width: 400px
-}
- 
-#day {
-    background-color: black;
-    background-image: none;
-}
 
 @keyframes pulse {
     0% {
