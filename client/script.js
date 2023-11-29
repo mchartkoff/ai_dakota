@@ -1,6 +1,6 @@
-/*******CHAT*******/
+//*******CHAT*******/
 
-/*******CHAT Variables*******/
+//*******CHAT Variables*******/
 let botTextNumber = 0;
 let humanTextNumber = 0;
 
@@ -8,7 +8,7 @@ const chatInput = document.querySelector(".container-fluid.chat .chatarea textar
 const chatBtn = document.querySelector(".container-fluid.chat .chatarea .btn")
 
 
-/*******CHAT Listeners*******/
+//*******CHAT Listeners*******/
 if(chatBtn !== null){
 	chatBtn.addEventListener("click", function(e){
 		runBotResponse()
@@ -27,13 +27,13 @@ window.addEventListener("load", function(){
 }
 
 
-/*******CHAT Functions*******/
+//*******CHAT Functions*******/
 
-function generateHumanInput(){
+// function generateHumanInput(){
 
-	chatInput.value = prompts[0].human[humanTextNumber]
+// 	chatInput.value = prompts[0].human[humanTextNumber]
 
-}
+// }
 
 function generateBotResponse(type){
 
@@ -50,7 +50,8 @@ function generateBotResponse(type){
 	if(humanTextNumber < 3 && type === "bot"){
 		setTimeout(function(){ 
 
-			generateHumanInput()
+		// CHAT
+	generateHumanInput()
 			humanTextNumber++
 		}, 2000)
 	}
